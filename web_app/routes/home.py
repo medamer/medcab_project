@@ -1,13 +1,16 @@
-from flask import Flask
+from flask import Blueprint, jsonify
 
-app = Flask(__name__)
+home = Blueprint("home", __name__)
 
-@app.route("/")
+@home.route("/")
 def index():
     return "Hello World"
 
-#@app.route("/predict")
+@home.route("/predict")
+def predict():
+    mytext = "This is a prediction page"
+    return jsonify(mytext)
 
-@app.route("/about")
+@home.route("/about")
 def about():
     return "About me"
