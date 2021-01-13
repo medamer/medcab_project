@@ -11,6 +11,10 @@ python-dotenv = "*"
 psycopg2-binary = "*"
 pylint = "*"
 pandas = "*"
+python-decouple = "*"
+spacy = "*"
+sklearn = "*"
+scikit-learn = "*"
 
 [dev-packages]
 
