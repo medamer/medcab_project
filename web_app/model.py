@@ -11,7 +11,8 @@ import pickle
 import en_core_web_sm
 from spacy import load
 
-df = pd.read_csv('data/cannabis_new.csv')
+
+df = pd.read_csv('./data/cannabis_new.csv') # Used the dataset to train the model
 
 nlp = en_core_web_sm.load()
 
@@ -20,22 +21,22 @@ def tokenizer(text):
     return [token.lemma_ for token in doc if ((token.is_stop == False) and
     (token.is_punct == False)) and (token.pos_ != 'PRON')]
 
-# Build the model:
+# # Build the model:
 model = TfidfVectorizer(stop_words = 'english',
                         ngram_range = (1,2),
                         max_df = .95,
                         min_df = 3,
                         tokenizer = tokenizer)
 
-# Fit the model:
+# # Fit the model:
 dtm = model.fit_transform(df['Effects'])
 
-# Get features:
+# # Get features:
 dtm = pd.DataFrame(dtm.todense(), columns = model.get_feature_names())
 nn = NearestNeighbors(n_neighbors = 5, algorithm = 'kd_tree')
 nn.fit(dtm)
 
-# Pickle trained model:
+# # Pickle trained model:
 filename = 'model.pkl'
 model_pkl = open(filename, 'wb') # Open the file to save as pkl file
 pickle.dump(nn, model_pkl)
