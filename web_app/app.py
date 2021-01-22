@@ -31,7 +31,7 @@ def index():
 def prediction():
     user_input = request.form['comment']
     pred = my_prediction(user_input)
-    qeury = f"""
+    query = f"""
             select strain_name as Name, strain_type as Type, strain_rating as Rating, 
 	               strain_effects as Effects, strain_description as Description, 
 	               strain_flavors as Flavors from medcab
