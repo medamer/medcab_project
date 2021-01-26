@@ -9,14 +9,25 @@
   </head>
   <body>
     <div class="container">
-      <img src="../static/can.png" alt="" class="logo" />
-      <h1>Thank You!</h1>
-      <h2>Thank you for rating your experience. We hope to see you soon!</h2>
+      <img src="../static/can.png" alt="" />
+      <h1>Thank you for using our web app!</h1>
+      <h2>This is the best strain matching your needs:</h2>
       <form method="POST">
       </form>
       <p>
-        {{predicted}}
+        <h3>Strain Name:</h3> {{pred}} <br/>
+      </p>
       <p>
+        <h3>Strain Type: </h3> {{pred1}} <br/>
+      </p>
+      <p>
+        <h3>Flavors</h3> {{pred5}} <br/>
+      </p>
+      <p>
+        <h3>Description: </h3>
+        {{pred4}}
+      </p>
+
     </div>
   </body>
 </html>

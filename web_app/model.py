@@ -56,4 +56,4 @@ def my_prediction(user_input):
         elem = similar[0][i]
         output.append(elem)
 
-    return output
+    return output[0]
