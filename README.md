@@ -12,19 +12,19 @@ git clone https://github.com/medamer/medcab_project.git
 cd medcab_project
 ```
 
-- Create python virtual invirement with python version 3.7:
+- Create a python virtual environment with python version 3.7:
 ```sh
 pipenv shell --python 3.7
 ```
-- Install requirment file:
+- Install requirements file:
 ```sh
-pipenv install r requirment
+pipenv install -r requirements.txt
 ```
 
-## Deploy localy:
+## Run the Web App localy:
 - Run the flask app:
 ```sh
-FLASK_APP=web_app flask run
+python web_app/app.py
 ```
 
-- Copy and paste the address in your browser
+- Copy and paste the address into your browser

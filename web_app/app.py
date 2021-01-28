@@ -12,7 +12,7 @@ load_dotenv()
 
 # Get the credentials from .env file:
 DB_USER = os.getenv("USER")
-DB_NAME = os.getenv("USER")
+DB_NAME = os.getenv("NAME")
 DB_PASSWORD = os.getenv("PASSWORD")
 DB_HOST = os.getenv("SERVER")
 
