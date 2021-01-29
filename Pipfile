@@ -15,6 +15,7 @@ python-decouple = "*"
 spacy = "*"
 sklearn = "*"
 scikit-learn = "*"
+gunicorn = "*"
 
 [dev-packages]
 
